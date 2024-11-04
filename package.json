@@ -4,8 +4,9 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "start": "remix-serve build",
-    "build": "remix build",
+    "start": "remix-serve ./build/index.js",
+    "build": "remix vite:build",
+    "dev": "remix vite:dev",
     "migrate:deploy": "prisma migrate deploy",
     "prisma:generate": "prisma generate",
     "docker:build": "docker build -t your-app-name .",
