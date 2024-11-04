@@ -48,8 +48,6 @@ COPY --from=build /myapp/node_modules/.prisma /myapp/node_modules/.prisma
 # Generate Prisma client
 RUN yarn prisma generate
 
-RUN yarn prisma migrate deploy
-
 EXPOSE 3000
 
 CMD ["yarn", "start"]
