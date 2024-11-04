@@ -4,7 +4,7 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "start": "remix-serve ./build/index.js",
+    "start": "remix-serve ./build/server/index.js",
     "build": "remix vite:build",
     "dev": "remix vite:dev",
     "migrate:deploy": "prisma migrate deploy",
