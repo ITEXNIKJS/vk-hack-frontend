@@ -4,11 +4,12 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build": "remix vite:build",
-    "dev": "remix vite:dev",
-    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
-    "start": "remix-serve ./build/server/index.js",
-    "typecheck": "tsc"
+    "start": "remix-serve build",
+    "build": "remix build",
+    "migrate:deploy": "prisma migrate deploy",
+    "prisma:generate": "prisma generate",
+    "docker:build": "docker build -t your-app-name .",
+    "docker:run": "docker run -p 3000:3000 -e DATABASE_URL='your-database-url' your-app-name"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
